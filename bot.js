@@ -91,6 +91,8 @@ client.on("message", message => {
          $help : عرض هذه الرسالة
          $cut : للعب لعبة كت تويت 
          $ping : لمعرفة سرعة استجابة البوت في الوقت الحالي
+         $mcskin : لرؤية ايا سكن ب ماين كرافت
+         $minc : اسئلة عن ماين كرافت
          __Admins Commands__
          $ban : حظر العضو من السيرفر
          $kick : طرد العضو من السيرفر
@@ -806,5 +808,38 @@ client.on('message', async message =>{
            })
             }  
            });
+
+client.on("message", message => {
+    var prefix = "$"
+    if (!message.content.startsWith(prefix)) return;
+      let command = message.content.split(" ")[0];
+      command = command.slice(prefix.length);
+        if(command === "mcskin") {
+                const args = message.content.split(" ").slice(1).join(" ")
+        if (!args) return message.channel.send("** Type your skin name **");
+        const image = new Discord.Attachment(`https://minotar.net/armor/body/${args}`, "skin.png");
+    message.channel.send(image)
+        }
+    });
+
+const minecraft = [  'ما معنى تطويرة؛ silk touch ؟',  'من هوة اللذي قد انهى سلسلة سيرفر مايت كرافت؟',  'ماهو الوحش اللذي يرسبن في معبد البحر؟',  'من افضل يوتيوبر ينزل شروحات)ردستونية؛عامة',  'ماذا يفعل لك الهيروبراين؟',  'ماهو الشئ اللذي يمكن مكاثرة الفلجر فيه؟',  'من هو اندر ثاني شئ في ماين كرافت',  'ماهو الامر اللذي يعطينا كوماند بلوك؟',  'كم من الوقت يستغرق اليوم العادي في ماين كرافت؟',  'هل لليردستون اهمية كبيرة في ماين كرافت؟',  'اندر اور',  'مطور ماين كرافت السابق',  'اصغر موب في ماين كرافت',  'كيف تصنع البوق',  'في اي ارتفاع تلقى الدايموند',  'موب مستحيل تضربة بالبو (السهم)',  'كم نحتاج من Glowstone Dust لكي نصنع بلكة كاملة منه',  'كم نحتاج حبة ايرون لصنع سكة الحديد (Track)',  'كم عدد قلوب البقرة',  'ن ماذا يخاف الكريبر',  'يشتهر الاندرمان ب…..?',  'كم عدد قلوب الايرون قولم',  'كم ضربة تضرب الدجاجة و تموت',  'كم بلوكة تحتاج بوابة النذر',  'كم بلوكة تحتاج بوابة الاند',  'كم تحتاج الفرن ايروون عشان تصنعها',  'كيف تصنع كرافتنق تيبل',  'كم ياخذ وقت النبات عشان يكبر',  'كم قلوب ستيفي',  'كم قلوب الاندر مان',  'هل الاندر مان يضرب',  'هل الزومبي غبي ؟ و في اي تحديث ؟',  'ماهو الافضل للتسخين الافا او فحم ؟',  'ماهو شئ الذي اقوى من الاوبسيدين ؟',]
+client.on('message', message => {
+
+ 
+if (message.content.startsWith(prefix + 'minec')) {
+
+  if(!message.channel.guild) return message.reply('** This command only for servers **');
+var client= new Discord.RichEmbed()
+.setTitle("لعبة ماين كرافت ..")
+.setColor('RANDOM')
+.setDescription(`${minecraft[Math.floor(Math.random() * minecraft.length)]}`)
+.setImage("https://i.imgur.com/RyOXHmZ.png")
+               .setTimestamp()
+
+message.channel.sendEmbed(client);
+message.react("??")
+}
+
+})
 
 client.login(process.env.BOT_TOKEN);
