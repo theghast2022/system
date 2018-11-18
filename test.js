@@ -807,4 +807,4 @@ client.on('message', async message =>{
             }  
            });
 
-client.login('NTEzMjkxOTcxMjM0NzU4NjY3.DtM63g.z0C9hrEl2NBANJIY7HpFTSGOghk');
+client.login(process.env.BOT_TOKEN);
