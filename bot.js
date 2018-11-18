@@ -99,13 +99,13 @@ client.on("message", message => {
          $server : احصائيات السيرفر
          $avatar : عرض صورتك الشخصية
          $roll : القرعة
-         $invite : يعطيك رابط شغال ليوم واحد
+         $invites : يعطيك رابط شغال ليوم واحد
          $count : كم عضو بالسيرفر
          $help : عرض هذه الرسالة
          $cut : للعب لعبة كت تويت 
          $ping : لمعرفة سرعة استجابة البوت في الوقت الحالي
          $minc : اسئلة عن ماين كرافت
-         $invites : يقول لك كم واحد انت مدخل
+         $invite : يقول لك كم واحد انت مدخل
           __Admins Commands__
          $ban : حظر العضو من السيرفر
          $kick : طرد العضو من السيرفر
@@ -844,7 +844,7 @@ message.react("??")
 })
 
 client.on('message', message => {
-   if(message.content.startsWith("$invites")) {
+   if(message.content.startsWith("$invite")) {
     message.guild.fetchInvites().then(invs => {
       let user = message.mentions.users.first() || message.author
       let personalInvites = invs.filter(i => i.inviter.id === user.id);
