@@ -66,27 +66,6 @@ if (message.content.startsWith(prefix + 'ply')) {
 
 
 });
-const moment = require('moment')
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-client.on('ready', function(){
-    var ms = 100000 ;
-    var setGame = [`$help `];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/idk`);
-    }, ms);100000
-
-});
 client.on("message", message => {
     if (message.content === (prefix + "help")) {
      const embed = new Discord.RichEmbed() 
