@@ -72,6 +72,7 @@ client.on("message", message => {
          .setColor("#580e6b")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**
+         ✧▬▬▬▬▬▬ BOT Games ▬▬▬▬▬▬✧
          __All Commands__
          $id : عرض ملفك الشخصي
          $ask : البوت يسئلك اسئلة
@@ -94,7 +95,7 @@ client.on("message", message => {
          $role : لاعطاء شخص رتبة او سحبها
          $warn : لاعطاء الشخص تحذير
          $moveall : لسحب جميع الداخلين ب الفويس
-         
+         ✧▬▬▬▬▬▬ BOT Games ▬▬▬▬▬▬✧
        **  `)
    message.author.sendEmbed(embed)
    
