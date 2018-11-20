@@ -834,4 +834,22 @@ message.channel.send(`${user} has **${inviteCount}** invites.`);
   }
 });
 
+client.on('guildMemberAdd', msg => { 
+    var embed = new Discord.RichEmbed()
+    .setAuthor(msg.user.username, msg.user.avatarURL)
+    .setThumbnail(msg.user.avatarURL)
+    .setImage('https://cdn.discordapp.com/attachments/492862340484694027/493771573740830740/welcome1.png')     
+    .setTitle('عضو جديد!')
+    .setDescription('مرحبا بك بالسيرفر')
+    .addField('``ايدي العضو``:',"" +  msg.user.id, true)
+    .addField('``تاق العضو``', msg.user.discriminator, true)
+    .addField('``تم الانشاء في``', msg.user.createdAt, true)
+    .addField(' :bust_in_silhouette:  انت رقم',`**[ ${msg.guild.memberCount} ]**`,true)
+    .setColor('GREEN')
+    .setFooter(msg.guild.name, msg.guild.iconURL, true)
+    var channel = msg.guild.channels.find('name', 'welcome')         
+    if (!channel) return;
+    channel.send({embed : embed});
+    });
+
 client.login(process.env.BOT_TOKEN);
