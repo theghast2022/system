@@ -1015,6 +1015,8 @@ client.on('message', async message => {
       message.channel.send(`**:white_check_mark: ${mention.user.username} unmuted in the server ! :neutral_face:  **  `);
   }
 });
-
+client.on('guildMemberAdd', (member) => {
+member.addRole(member.guild.roles.find('name', 'Player'));  
+});
 
 client.login(process.env.BOT_TOKEN);
