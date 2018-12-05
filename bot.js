@@ -96,6 +96,7 @@ client.on("message", message => {
          $ping ➼ لمعرفة سرعة استجابة البوت في الوقت الحالي
          $minc ➼ اسئلة عن ماين كرافت
          $invite ➼ يقول لك كم واحد انت مدخل
+         $new ➼ لفتح تذكرة
           __Admins Commands__
          $ban ➼ حظر العضو من السيرفر
          $kick ➼ طرد العضو من السيرفر
@@ -109,6 +110,9 @@ client.on("message", message => {
          $unmute ➼ لفك الميوت عن الشخص
          $mc ➼ لقفل الشات
          $umc ➼ لفتح الشات 
+         $bc ➼ رسالة جماعية
+         $obc ➼ رسالة جماعية فقط للاونلاين
+         $ebc ➼ رسالة جماعية ب امبيد
          ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
        **  `)
    message.author.sendEmbed(embed)
@@ -765,5 +769,63 @@ client.on("message", (message) => {
     }
  
 });
+
+
+client.on("message", message => {
+
+            if (message.content.startsWith(prefix + "bc")) {
+                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
+  var argresult = args.join(' '); 
+  message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
+ m.send(`${argresult}\n ${m}`);
+})
+ message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : عدد الاعضاء المستلمين`); 
+ message.delete(); 
+};     
+});
+
+client.on("message", message => {
+
+    if (message.content.startsWith(prefix + "obc")) {
+                 if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+let args = message.content.split(" ").slice(1);
+var argresult = args.join(' '); 
+message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
+m.send(`${argresult}\n ${m}`);
+})
+message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : عدد الاعضاء المستلمين`); 
+message.delete(); 
+};     
+});
+
+
+client.on('message', message => {
+    var prefix = "$";
+   
+        if (message.author.id === client.user.id) return;
+        if (message.guild) {
+       let embed = new Discord.RichEmbed()
+        let args = message.content.split(' ').slice(1).join(' ');
+    if(message.content.split(' ')[0] == prefix + 'ebc') {
+        if (!args[1]) {
+    message.channel.send("*bc <message>");
+    return;
+    }
+            message.guild.members.forEach(m => {
+       if(!message.member.hasPermission('ADMINISTRATOR')) return;
+                var bc = new Discord.RichEmbed()
+                .addField('» السيرفر :', `${message.guild.name}`)
+                .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
+                .addField(' » الرسالة : ', args)
+                .setColor('#ff0000')
+                // m.send(`[${m}]`);
+                m.send(`${m}`,{embed: bc});
+            });
+        }
+        } else {
+            return;
+        }
+    });
 
 client.login(process.env.BOT_TOKEN);
