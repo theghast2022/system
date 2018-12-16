@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-const googl = require('goo.gl'); 
 const client = new Discord.Client();
 const ytdl = require("ytdl-core");
 const { Client, Util } = require('discord.js');
@@ -105,7 +104,6 @@ client.on("message", message => {
          $minc ➼ اسئلة عن ماين كرافت
          $invite ➼ يقول لك كم واحد انت مدخل
          $new ➼ لفتح تذكرة
-         $short ➼ لاختصار الروابط
          __Admins Commands__
          $ban ➼ حظر العضو من السيرفر
          $kick ➼ طرد العضو من السيرفر
