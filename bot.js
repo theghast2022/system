@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const fs = require('fs');
+const googl = require('goo.gl'); 
 const client = new Discord.Client();
 const ytdl = require("ytdl-core");
 const { Client, Util } = require('discord.js');
@@ -104,6 +105,7 @@ client.on("message", message => {
          $minc ➼ اسئلة عن ماين كرافت
          $invite ➼ يقول لك كم واحد انت مدخل
          $new ➼ لفتح تذكرة
+         $short ➼ لاختصار الروابط
          __Admins Commands__
          $ban ➼ حظر العضو من السيرفر
          $kick ➼ طرد العضو من السيرفر
@@ -1101,6 +1103,23 @@ if (message.content.startsWith(adminprefix + 'setT')) {
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
 }
  
+});
+
+client.on('message', message => { 
+    var prefix = "$";
+ let args = message.content.split(' ').slice(1);
+    if(message.content.startsWith(prefix + 'short')) {
+    if(!message.channel.guild) return;  
+
+        googl.setKey('AIzaSyC2Z2mZ_nZTcSvh3QvIyrmOIFP6Ra6co6w');
+        googl.getKey();
+        googl.shorten(args.join(' ')).then(shorturl => {
+            message.channel.send(''+shorturl)
+        }).catch(e=>{
+            console.log(e.message);
+            message.channel.send('Error!');
+        });
+}
 });
 
 client.login(process.env.BOT_TOKEN);
