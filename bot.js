@@ -510,7 +510,7 @@ client.on('message', async message =>{
               invites[member.guild.id] = guildInvites;
               const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
               const inviter = client.users.get(invite.inviter.id);
-              const logChannel = member.guild.channels.find(channel => channel.name === "text");
+              const logChannel = member.guild.channels.find(channel => channel.name === "txt");
               logChannel.send(`Invited by: <@${inviter.tag}>`);
             });
           });
