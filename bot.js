@@ -104,6 +104,7 @@ client.on("message", message => {
          $minc ➼ اسئلة عن ماين كرافت
          $invite ➼ يقول لك كم واحد انت مدخل
          $new ➼ لفتح تذكرة
+         $inv ➼ لدعوة البوت الى سيرفرك
          __Admins Commands__
          $ban ➼ حظر العضو من السيرفر
          $kick ➼ طرد العضو من السيرفر
@@ -894,6 +895,15 @@ client.on('message', message => {
             return;
         }
     });
+
+client.on('message', message => {
+  if (true) {
+if (message.content === '$inv') {
+      message.author.send('https://discordapp.com/api/oauth2/authorize?client_id=513291971234758667&permissions=8&scope=bot').catch(e => console.log(e.stack));
+
+    }
+   } 
+  });
 
 client.on('message', async msg => {
     if (msg.author.bot) return undefined;
