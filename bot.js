@@ -105,6 +105,7 @@ client.on("message", message => {
          $invite ➼ يقول لك كم واحد انت مدخل
          $new ➼ لفتح تذكرة
          $inv ➼ لدعوة البوت الى سيرفرك
+         $support ➼ سيرفر الدعم الفني للبوت
          __Admins Commands__
          $ban ➼ حظر العضو من السيرفر
          $kick ➼ طرد العضو من السيرفر
@@ -281,6 +282,17 @@ client.on('message', message => {
     embed : kickembed
   })
 }
+});
+client.on('message', message => {
+  if (message.content === "$support") {
+  let embed = new Discord.RichEmbed()
+.setAuthor(message.author.username)
+.setColor("#9B59B6")
+.addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/p6WKSDq**")
+  
+  
+message.channel.sendEmbed(embed);
+ }
 });
 client.on('message', message => {
   if (message.author.codes) return;
