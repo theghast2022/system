@@ -131,6 +131,7 @@ client.on("message", message => {
          $np ➼ لمعرفة الأغنية المشغلة حآليا
          $queue ➼ لمعرفة قآئمة التشغيل
          ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
+         By ➼ <@388357326614167563>
        **  `)
    message.author.sendEmbed(embed)
    
