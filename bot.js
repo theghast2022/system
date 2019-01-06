@@ -90,7 +90,7 @@ client.on("message", message => {
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**
          ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
-         __All Commands__
+         :classical_building:__All Commands__:classical_building:
          $id ➼ عرض ملفك الشخصي
          $ask ➼ البوت يسئلك اسئلة
          $server ➼ احصائيات السيرفر
@@ -105,7 +105,7 @@ client.on("message", message => {
          $new ➼ لفتح تذكرة
          $inv ➼ لدعوة البوت الى سيرفرك
          $support ➼ سيرفر الدعم الفني للبوت
-         __Admins Commands__
+         :no_entry_sign:__Admins Commands__:no_entry_sign: 
          $ban ➼ حظر العضو من السيرفر
          $kick ➼ طرد العضو من السيرفر
          $clear ➼ مسح الشات
@@ -121,7 +121,7 @@ client.on("message", message => {
          $bc ➼ رسالة جماعية
          $obc ➼ رسالة جماعية فقط للاونلاين
          $ebc ➼ رسالة جماعية ب امبيد
-         __Music Commands__
+         :musical_note:__Music Commands__:musical_note: 
          $play ➼ لتشغيل أغنية برآبط أو بأسم
          $skip ➼ لتجآوز الأغنية الحآلية
          $stop ➼ إيقآف الأغنية مؤقتا
@@ -130,7 +130,7 @@ client.on("message", message => {
          $leave ➼ لإخرآج البوت من الروم
          $np ➼ لمعرفة الأغنية المشغلة حآليا
          $queue ➼ لمعرفة قآئمة التشغيل
-         __Games Commands__
+         :video_game:__Games Commands__:video_game: 
          $cut ➼ للعب لعبة كت تويت
          $لعرض النقاط الخاصة بك ➼ نقاطي
          $قم بتفكيك الجمل ➼ فكك
