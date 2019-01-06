@@ -439,7 +439,7 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
   .addField(' **Bot left from :**[' + `${guild.name}` + ']     **By : **' + `${guild.owner.user.username}` +  ' ')
   .setFooter('The bot is crying')
   .setTimestamp()
-  client.channels.get("476342429575020544").send(embed)
+  client.channels.get("531359646485839892").send(embed)
 });
 
 
