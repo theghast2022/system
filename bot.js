@@ -106,11 +106,6 @@ client.on("message", message => {
          $inv ➼ لدعوة البوت الى سيرفرك
          $support ➼ سيرفر الدعم الفني للبوت
          $bot ➼ معلومات عن البوت
-         
-
-
-
-
          __Admins Commands__ 
          $ban ➼ حظر العضو من السيرفر
          $kick ➼ طرد العضو من السيرفر
@@ -135,11 +130,6 @@ client.on("message", message => {
          $roleremove all @role ➼ لسحب رتبة من الكل
          $roleremove bots @role ➼ لسحب رتبة من البوتات
          $roleremove humans @role ➼ لسحب رتبة من الاشخاص
-         
-
-
-
-
          __Music Commands__ 
          $play ➼ لتشغيل أغنية برآبط أو بأسم
          $skip ➼ لتجآوز الأغنية الحآلية
@@ -149,11 +139,6 @@ client.on("message", message => {
          $leave ➼ لإخرآج البوت من الروم
          $np ➼ لمعرفة الأغنية المشغلة حآليا
          $queue ➼ لمعرفة قآئمة التشغيل
-        
-
-
-
-
          __Games Commands__
          $cut ➼ للعب لعبة كت تويت
          ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
