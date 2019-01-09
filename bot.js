@@ -106,6 +106,26 @@ client.on("message", message => {
          $inv ➼ لدعوة البوت الى سيرفرك
          $support ➼ سيرفر الدعم الفني للبوت
          $bot ➼ معلومات عن البوت
+                **  `)
+   message.author.sendEmbed(embed)
+   
+   }
+   });  
+client.on('message', message => {
+     if (message.content === (prefix + "help")) {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("RANDOM")
+  .addField("Done" , " **تــــم ارســالك في الخــاص**")
+  message.channel.sendEmbed(embed);
+    }
+});
+client.on("message", message => {
+    if (message.content === (prefix + "help")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`**
          __Admins Commands__ 
          $ban ➼ حظر العضو من السيرفر
          $kick ➼ طرد العضو من السيرفر
@@ -130,7 +150,27 @@ client.on("message", message => {
          $roleremove all @role ➼ لسحب رتبة من الكل
          $roleremove bots @role ➼ لسحب رتبة من البوتات
          $roleremove humans @role ➼ لسحب رتبة من الاشخاص
-         __Music Commands__ 
+                        **  `)
+   message.author.sendEmbed(embed)
+   
+   }
+   });  
+client.on('message', message => {
+     if (message.content === (prefix + "help")) {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("RANDOM")
+  .addField("Done" , " **تــــم ارســالك في الخــاص**")
+  message.channel.sendEmbed(embed);
+    }
+});
+        
+        client.on("message", message => {
+    if (message.content === (prefix + "help")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`** __Music Commands__ 
          $play ➼ لتشغيل أغنية برآبط أو بأسم
          $skip ➼ لتجآوز الأغنية الحآلية
          $stop ➼ إيقآف الأغنية مؤقتا
@@ -139,6 +179,26 @@ client.on("message", message => {
          $leave ➼ لإخرآج البوت من الروم
          $np ➼ لمعرفة الأغنية المشغلة حآليا
          $queue ➼ لمعرفة قآئمة التشغيل
+                         **  `)
+   message.author.sendEmbed(embed)
+   
+   }
+   });  
+client.on('message', message => {
+     if (message.content === (prefix + "help")) {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("RANDOM")
+  .addField("Done" , " **تــــم ارســالك في الخــاص**")
+  message.channel.sendEmbed(embed);
+    }
+});
+client.on("message", message => {
+    if (message.content === (prefix + "help")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`**       
          __Games Commands__
          $cut ➼ للعب لعبة كت تويت
          ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
