@@ -106,6 +106,11 @@ client.on("message", message => {
          $inv ➼ لدعوة البوت الى سيرفرك
          $support ➼ سيرفر الدعم الفني للبوت
          $bot ➼ معلومات عن البوت
+         
+
+
+
+
          __Admins Commands__ 
          $ban ➼ حظر العضو من السيرفر
          $kick ➼ طرد العضو من السيرفر
@@ -122,6 +127,19 @@ client.on("message", message => {
          $bc ➼ رسالة جماعية
          $obc ➼ رسالة جماعية فقط للاونلاين
          $ebc ➼ رسالة جماعية ب امبيد
+         $role @someone @role ➼ لاعطاء شخص رتبة
+         $role all @role ➼ لاعطاء الكل رتبة
+         $role bots @role ➼ لاعطاء البوتات رتبة
+         $role humans @role ➼ لاعطاء الاعضاء رتبة
+         $roleremove @someone @role ➼ لسحب رتبة من شخص
+         $roleremove all @role ➼ لسحب رتبة من الكل
+         $roleremove bots @role ➼ لسحب رتبة من البوتات
+         $roleremove humans @role ➼ لسحب رتبة من الاشخاص
+         
+
+
+
+
          __Music Commands__ 
          $play ➼ لتشغيل أغنية برآبط أو بأسم
          $skip ➼ لتجآوز الأغنية الحآلية
@@ -131,6 +149,11 @@ client.on("message", message => {
          $leave ➼ لإخرآج البوت من الروم
          $np ➼ لمعرفة الأغنية المشغلة حآليا
          $queue ➼ لمعرفة قآئمة التشغيل
+        
+
+
+
+
          __Games Commands__
          $cut ➼ للعب لعبة كت تويت
          ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
@@ -518,23 +541,11 @@ client.on('message', async message =>{
       
          });
 
-
-
-         client.on('guildMemberAdd', member => {
-            member.guild.fetchInvites().then(guildInvites => {
-              const ei = invites[member.guild.id];
-              invites[member.guild.id] = guildInvites;
-              const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
-              const inviter = client.users.get(invite.inviter.id);
-              const logChannel = member.guild.channels.find(channel => channel.name === "txt");
-              logChannel.send(`Invited by: <@${inviter.tag}>`);
-            });
-          });
           
           
           const cuttweet = [
-               ':bookmark:كت تويت ‏| تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟',
-               ':bookmark:كت تويت | أكثر شيء يُسكِت الطفل برأيك؟',
+               ':bookmark:‏كت تويت ‏| تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟',
+               ':bookmark:‏‏كت تويت | أكثر شيء يُسكِت الطفل برأيك؟',
                ':bookmark:‏كت تويت | الحرية لـ ... ؟',
                ':bookmark:‏كت تويت | قناة الكرتون المفضلة في طفولتك؟',
                ':bookmark:‏كت تويت ‏| كلمة للصُداع؟',
@@ -544,7 +555,7 @@ client.on('message', async message =>{
                ':bookmark:‏كت تويت | بعد ١٠ سنين ايش بتكون ؟',
                ':bookmark:‏كت تويت ‏| مِن أغرب وأجمل الأسماء التي مرت عليك؟',
                ':bookmark:‏كت تويت | عمرك شلت مصيبة عن شخص برغبتك ؟',
-               'كت تويت | أكثر سؤال وجِّه إليك مؤخرًا؟',
+               ':bookmark:‏كت تويت | أكثر سؤال وجِّه إليك مؤخرًا؟:',
                ':bookmark:‏كت تويت | ما هو الشيء الذي يجعلك تشعر بالخوف؟',
                ':bookmark:‏كت تويت | وش يفسد الصداقة؟',
                ':bookmark:‏كت تويت | شخص لاترفض له طلبا ؟',
@@ -937,6 +948,54 @@ if (message.content === '$inv') {
     }
    } 
   });
+
+client.on("message", message => {
+    ;
+    var args = message.content.split(' ').slice(1);
+    var msg = message.content.toLowerCase();
+    if( !message.guild ) return;
+    if( !msg.startsWith( prefix + 'role' ) ) return;
+    if(!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(' **__ليس لديك صلاحيات__**');
+    if( msg.toLowerCase().startsWith( prefix + 'roleremove' ) ){
+        if( !args[0] ) return message.reply( '**:x: يرجى وضع الشخص المراد سحب منه الرتبة**' );
+        if( !args[1] ) return message.reply( '**:x: يرجى وضع الرتبة المراد سحبها من الشخص**' );
+        var role = msg.split(' ').slice(2).join(" ").toLowerCase();
+        var role1 = message.guild.roles.filter( r=>r.name.toLowerCase().indexOf(role)>-1 ).first();
+        if( !role1 ) return message.reply( '**:x: يرجى وضع الرتبة المراد سحبها من الشخص**' );if( message.mentions.members.first() ){
+            message.mentions.members.first().removeRole( role1 );
+            return message.reply('**:white_check_mark: [ '+role1.name+' ] رتبة [ '+args[0]+' ] تم سحب من **');
+        }
+        if( args[0].toLowerCase() == "all" ){
+            message.guild.members.forEach(m=>m.removeRole( role1 ))
+            return  message.reply('**:white_check_mark: [ '+role1.name+' ] تم سحب من الكل رتبة**');
+        } else if( args[0].toLowerCase() == "bots" ){
+            message.guild.members.filter(m=>m.user.bot).forEach(m=>m.removeRole(role1))
+            return  message.reply('**:white_check_mark: [ '+role1.name+' ] تم سحب من البوتات رتبة**');
+        } else if( args[0].toLowerCase() == "humans" ){
+            message.guild.members.filter(m=>!m.user.bot).forEach(m=>m.removeRole(role1))
+            return  message.reply('**:white_check_mark: [ '+role1.name+' ] تم سحب من البشريين رتبة**');
+        }  
+    } else {
+        if( !args[0] ) return message.reply( '**:x: يرجى وضع الشخص المراد اعطائها الرتبة**' );
+        if( !args[1] ) return message.reply( '**:x: يرجى وضع الرتبة المراد اعطائها للشخص**' );
+        var role = msg.split(' ').slice(2).join(" ").toLowerCase();
+        var role1 = message.guild.roles.filter( r=>r.name.toLowerCase().indexOf(role)>-1 ).first();
+        if( !role1 ) return message.reply( '**:x: يرجى وضع الرتبة المراد اعطائها للشخص**' );if( message.mentions.members.first() ){
+            message.mentions.members.first().addRole( role1 );
+            return message.reply('**:white_check_mark: [ '+role1.name+' ] رتبة [ '+args[0]+' ] تم اعطاء **');
+        }
+        if( args[0].toLowerCase() == "all" ){
+            message.guild.members.forEach(m=>m.addRole( role1 ))
+            return  message.reply('**:white_check_mark: [ '+role1.name+' ] تم اعطاء الكل رتبة**');
+        } else if( args[0].toLowerCase() == "bots" ){
+            message.guild.members.filter(m=>m.user.bot).forEach(m=>m.addRole(role1))
+            return  message.reply('**:white_check_mark: [ '+role1.name+' ] تم اعطاء البوتات رتبة**');
+        } else if( args[0].toLowerCase() == "humans" ){
+            message.guild.members.filter(m=>!m.user.bot).forEach(m=>m.addRole(role1))
+            return  message.reply('**:white_check_mark: [ '+role1.name+' ] تم اعطاء البشريين رتبة**');
+        }
+    }
+});
 
 client.on('message', async msg => {
     if (msg.author.bot) return undefined;
