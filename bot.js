@@ -86,7 +86,7 @@ if (message.content.startsWith(prefix + 'ply')) {
 client.on("message", message => {
     if (message.content === (prefix + "help")) {
      const embed = new Discord.RichEmbed() 
-         .setColor("#580e6b")
+         .setColor("RANDOM")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**
          ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
@@ -123,7 +123,7 @@ client.on('message', message => {
 client.on("message", message => {
     if (message.content === (prefix + "help")) {
      const embed = new Discord.RichEmbed() 
-         .setColor("#580e6b")
+         .setColor("RANDOM")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**
          🛠__Admins Commands__🛠 
@@ -168,7 +168,7 @@ client.on('message', message => {
         client.on("message", message => {
     if (message.content === (prefix + "help")) {
      const embed = new Discord.RichEmbed() 
-         .setColor("#580e6b")
+         .setColor("RANDOM")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`** 🎶__Music Commands__🎶
          $play ➼ لتشغيل أغنية برآبط أو بأسم
@@ -196,7 +196,7 @@ client.on('message', message => {
 client.on("message", message => {
     if (message.content === (prefix + "help")) {
      const embed = new Discord.RichEmbed() 
-         .setColor("#580e6b")
+         .setColor("RANDOM")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**       
          🎮__Games Commands__🎮
