@@ -90,7 +90,7 @@ client.on("message", message => {
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**
          ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
-         __All Commands__
+         👑__All Commands__👑
          $id ➼ عرض ملفك الشخصي
          $ask ➼ البوت يسئلك اسئلة
          $server ➼ احصائيات السيرفر
@@ -126,7 +126,7 @@ client.on("message", message => {
          .setColor("#580e6b")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**
-         __Admins Commands__ 
+         🛠__Admins Commands__🛠 
          $ban ➼ حظر العضو من السيرفر
          $kick ➼ طرد العضو من السيرفر
          $clear ➼ مسح الشات
@@ -170,7 +170,7 @@ client.on('message', message => {
      const embed = new Discord.RichEmbed() 
          .setColor("#580e6b")
          .setThumbnail(message.author.avatarURL)
-         .setDescription(`** __Music Commands__ 
+         .setDescription(`** 🎶__Music Commands__🎶
          $play ➼ لتشغيل أغنية برآبط أو بأسم
          $skip ➼ لتجآوز الأغنية الحآلية
          $stop ➼ إيقآف الأغنية مؤقتا
@@ -199,7 +199,7 @@ client.on("message", message => {
          .setColor("#580e6b")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**       
-         __Games Commands__
+         🎮__Games Commands__🎮
          $cut ➼ للعب لعبة كت تويت
          ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
          By ➼ <@388357326614167563>
