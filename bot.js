@@ -106,47 +106,91 @@ client.on("message", message => {
          $inv ➼ لدعوة البوت الى سيرفرك
          $support ➼ سيرفر الدعم الفني للبوت
          $bot ➼ معلومات عن البوت
-         $cut ➼ للعب لعبة كت تويت
-         __Admins Commands__ 
-         $ban ➼ حظر العضو من السيرفر
-         $kick ➼ طرد العضو من السيرفر
-         $clear ➼ مسح الشات
-         $createroles ➼ عمل رتب متكاملة للسيرفر
-         $clear ➼ ل مسح الشات بعدد محدد
-         $warn ➼ لاعطاء الشخص تحذير
-         $moveall ➼ لسحب جميع الداخلين ب الفويس
-         $voicesetup ➼ تصنع فويس تشانل مكتوب فيها عدد الاونلاين يلي في الفويس 
-         $mute ➼ لاعطاء الشخص ميوت
-         $unmute ➼ لفك الميوت عن الشخص
-         $mc ➼ لقفل الشات
-         $umc ➼ لفتح الشات 
-         $bc ➼ رسالة جماعية
-         $obc ➼ رسالة جماعية فقط للاونلاين
-         $ebc ➼ رسالة جماعية ب امبيد
-         $role @someone @role ➼ لاعطاء شخص رتبة
-         $role all @role ➼ لاعطاء الكل رتبة
-         $role bots @role ➼ لاعطاء البوتات رتبة
-         $role humans @role ➼ لاعطاء الاعضاء رتبة
-         $roleremove @someone @role ➼ لسحب رتبة من شخص
-         $roleremove all @role ➼ لسحب رتبة من الكل
-         $roleremove bots @role ➼ لسحب رتبة من البوتات
-         $roleremove humans @role ➼ لسحب رتبة من الاشخاص
-         __Music Commands__
-         $play ➼ لتشغيل أغنية برآبط أو بأسم
-         $skip ➼ لتجآوز الأغنية الحآلية
-         $stop ➼ إيقآف الأغنية مؤقتا
-         $resume ➼ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-         $vol ➼ لتغيير درجة الصوت 100 - 0
-         $leave ➼ لإخرآج البوت من الروم
-         $np ➼ لمعرفة الأغنية المشغلة حآليا
-         $queue ➼ لمعرفة قآئمة التشغيل
-         ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
-         By ➼ <@388357326614167563> 
                 **  `)
    message.author.sendEmbed(embed)
    
    }
    });  
+
+   client.on("message", message => {
+       if (message.content === (prefix + "help")) {
+        const embed = new Discord.RichEmbed() 
+            .setColor("RANDOM")
+            .setThumbnail(message.author.avatarURL)
+            .setDescription(`**
+      __Admins Commands__ 
+      $ban ➼ حظر العضو من السيرفر
+      $kick ➼ طرد العضو من السيرفر
+      $clear ➼ مسح الشات
+      $createroles ➼ عمل رتب متكاملة للسيرفر
+      $clear ➼ ل مسح الشات بعدد محدد
+      $warn ➼ لاعطاء الشخص تحذير
+      $moveall ➼ لسحب جميع الداخلين ب الفويس
+      $voicesetup ➼ تصنع فويس تشانل مكتوب فيها عدد الاونلاين يلي في الفويس 
+      $mute ➼ لاعطاء الشخص ميوت
+      $unmute ➼ لفك الميوت عن الشخص
+      $mc ➼ لقفل الشات
+      $umc ➼ لفتح الشات 
+      $bc ➼ رسالة جماعية
+      $obc ➼ رسالة جماعية فقط للاونلاين
+      $ebc ➼ رسالة جماعية ب امبيد
+      $role @someone @role ➼ لاعطاء شخص رتبة
+      $role all @role ➼ لاعطاء الكل رتبة
+      $role bots @role ➼ لاعطاء البوتات رتبة
+      $role humans @role ➼ لاعطاء الاعضاء رتبة
+      $roleremove @someone @role ➼ لسحب رتبة من شخص
+      $roleremove all @role ➼ لسحب رتبة من الكل
+      $roleremove bots @role ➼ لسحب رتبة من البوتات
+      $roleremove humans @role ➼ لسحب رتبة من الاشخاص
+      By ➼ <@388357326614167563> 
+          **  `)
+message.author.sendEmbed(embed)
+
+}
+});  
+
+
+   
+   client.on("message", message => {
+       if (message.content === (prefix + "help")) {
+        const embed = new Discord.RichEmbed() 
+            .setColor("RANDOM")
+            .setThumbnail(message.author.avatarURL)
+            .setDescription(`**
+            __Music Commands__
+      $play ➼ لتشغيل أغنية برآبط أو بأسم
+      $skip ➼ لتجآوز الأغنية الحآلية
+      $stop ➼ إيقآف الأغنية مؤقتا
+      $resume ➼ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
+      $vol ➼ لتغيير درجة الصوت 100 - 0
+      $leave ➼ لإخرآج البوت من الروم
+      $np ➼ لمعرفة الأغنية المشغلة حآليا
+      $queue ➼ لمعرفة قآئمة التشغيل
+      By ➼ <@388357326614167563> 
+          **  `)
+message.author.sendEmbed(embed)
+
+}
+});  
+
+   
+   client.on("message", message => {
+       if (message.content === (prefix + "help")) {
+        const embed = new Discord.RichEmbed() 
+            .setColor("RANDOM")
+            .setThumbnail(message.author.avatarURL)
+            .setDescription(`**
+      __Games Commands__
+      $cut ➼ للعب لعبة كت تويت
+      ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
+      By ➼ <@388357326614167563> 
+          **  `)
+message.author.sendEmbed(embed)
+
+}
+});  
+
+
 
 
 client.on('message', message => {
