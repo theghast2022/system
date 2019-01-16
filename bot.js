@@ -1214,7 +1214,7 @@ function play(guild, song) {
 
 client.on('guildCreate', guild => {
     var embed = new Discord.RichEmbed()
-    .setColor(#0x5500ff)
+    .setColor(0x5500ff)
     .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك ازا كنت تحتاج اي مساعدة توجه الى الدعم الفني https://discord.gg/p6WKSDq**`)
         guild.owner.send(embed)
   });
