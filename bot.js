@@ -106,6 +106,8 @@ client.on("message", message => {
          $inv ➼ لدعوة البوت الى سيرفرك
          $support ➼ سيرفر الدعم الفني للبوت
          $bot ➼ معلومات عن البوت
+         $say ➼ البوت يكرر كلامك
+         $say-embed ➼ البوت يكرر كلامك مع امبيد
                 **  `)
    message.author.sendEmbed(embed)
    
@@ -1217,5 +1219,64 @@ client.on('guildCreate', guild => {
         guild.owner.send(embed)
   });
 
+
+client.on('message', message => {
+
+    if (message.author.bot) return;
+  
+    if (!message.content.startsWith(prefix)) return;
+  
+  
+    let command = message.content.split(" ")[0];
+  
+    command = command.slice(prefix.length);
+  
+  
+    let args = message.content.split(" ").slice(1);
+  
+  
+  // -say
+  
+    if (command === "say") {
+  
+            message.delete()
+  
+      message.channel.sendMessage(args.join(" ")).catch(console.error);
+  
+    }
+  
+    
+  
+   
+  
+  
+  if (command == "say-embed") {
+  
+      let say = new Discord.RichEmbed()
+  
+      .setDescription(args.join(" "))
+  
+      .setColor(0x23b2d6)
+  
+      message.channel.sendEmbed(say);
+  
+      message.delete();
+  
+    }
+  
+  
+  
+  });
+
+
+
+client.on("guildMemberAdd", member => {
+    member.createDM().then(function (channel) {
+    return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
+  :crown:اسم العضو  ${member}:crown:  
+  انت العضو رقم ${member.guild.memberCount}
+  الدعم الفني : https://discord.gg/p6WKSDq  `) 
+  }).catch(console.error)
+  })
 
 client.login(process.env.BOT_TOKEN);
