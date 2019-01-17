@@ -83,114 +83,236 @@ if (message.content.startsWith(prefix + 'ply')) {
 
 
 });
-client.on("message", message => {
-    if (message.content === (prefix + "help")) {
-     const embed = new Discord.RichEmbed() 
-         .setColor("RANDOM")
-         .setThumbnail(message.author.avatarURL)
-         .setDescription(`**
-         ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
-         __All Commands__
-         $id ➼ عرض ملفك الشخصي
-         $ask ➼ البوت يسئلك اسئلة
-         $server ➼ احصائيات السيرفر
-         $avatar ➼ عرض صورتك الشخصية
-         $roll ➼ القرعة
-         يعطيك رابط شغال ليوم واحد ➼ رابط
-         $count ➼ كم عضو بالسيرفر
-         $help ➼ عرض هذه الرسالة
-         $ping ➼ لمعرفة سرعة استجابة البوت في الوقت الحالي
-         $minc ➼ اسئلة عن ماين كرافت
-         $invite ➼ يقول لك كم واحد انت مدخل
-         $new ➼ لفتح تذكرة
-         $inv ➼ لدعوة البوت الى سيرفرك
-         $support ➼ سيرفر الدعم الفني للبوت
-         $bot ➼ معلومات عن البوت
-         $say ➼ البوت يكرر كلامك
-         $say-embed ➼ البوت يكرر كلامك مع امبيد
-                **  `)
-   message.author.sendEmbed(embed)
-   
-   }
-   });  
+client.on('message', message => {
+if (message.content.startsWith(prefix + 'PHelp')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
+    let pages = [`
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+:earth_africa: The Public Commands :earth_africa:
+1༺༻  $id ➼ عرض ملفك الشخصي
+2༺༻  $ask ➼ البوت يسئلك اسئلة
+3༺༻  $server ➼ احصائيات السيرفر
+4༺༻  $avatar ➼ عرض صورتك الشخصية
+5༺༻  $roll ➼ القرعة
+6༺༻  يعطيك رابط شغال ليوم واحد ➼ رابط
+7༺༻  $count ➼ كم عضو بالسيرفر
+8༺༻  $help ➼ عرض هذه الرسالة
+9༺༻  $ping ➼ لمعرفة سرعة استجابة البوت في الوقت الحالي
+10༺༻ $minc ➼ اسئلة عن ماين كرافت
+11༺༻ $invite ➼ يقول لك كم واحد انت مدخل
+12༺༻ $new ➼ لفتح تذكرة
+13༺༻ $inv ➼ لدعوة البوت الى سيرفرك
+14༺༻ $support ➼ سيرفر الدعم الفني للبوت
+15༺༻ $bot ➼ معلومات عن البوت
+16༺༻ $say ➼ البوت يكرر كلامك
+17༺༻ $say-embed ➼ البوت يكرر كلامك مع امبيد
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+Click On ▶ To Go Administor Side
+   `
+,`
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+:closed_lock_with_key: Administor Coomands:closed_lock_with_key:
+1༺༻  $ban ➼ حظر العضو من السيرفر
+2༺༻  $kick ➼ طرد العضو من السيرفر
+3༺༻  $clear ➼ مسح الشات
+4༺༻  $createroles ➼ عمل رتب متكاملة للسيرفر
+5༺༻  $clear ➼ ل مسح الشات بعدد محدد
+6༺༻  $warn ➼ لاعطاء الشخص تحذير
+7༺༻  $moveall ➼ لسحب جميع الداخلين ب الفويس
+8༺༻  $voicesetup ➼ تصنع فويس تشانل مكتوب فيها عدد الاونلاين يلي في الفويس
+9༺༻  $mute ➼ لاعطاء الشخص ميوت
+10༺༻  $unmute ➼ لفك الميوت عن الشخص
+11༺༻  $mc ➼ لقفل الشات
+12༺༻  $umc ➼ لفتح الشات
+13༺༻  $bc ➼ رسالة جماعية
+14༺༻  $obc ➼ رسالة جماعية فقط للاونلاين
+15༺༻  $ebc ➼ رسالة جماعية ب امبيد
+16༺༻  $role @someone @role ➼ لاعطاء شخص رتبة
+17༺༻  $role all @role ➼ لاعطاء الكل رتبة
+18༺༻  $role bots @role ➼ لاعطاء البوتات رتبة
+19༺༻  $role humans @role ➼ لاعطاء الاعضاء رتبة
+20༺༻  $roleremove @someone @role ➼ لسحب رتبة من شخص
+21༺༻  $roleremove all @role ➼ لسحب رتبة من الكل
+22༺༻  $roleremove bots @role ➼ لسحب رتبة من البوتات
+23༺༻  $roleremove humans @role ➼ لسحب رتبة من الاشخاص
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+Click On ▶ To Go To Music Side
+   `,`
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+:musical_note:Music Commands:musical_note:
+1༺༻  $play ➼ لتشغيل أغنية برآبط أو بأسم
+2༺༻  $skip ➼ لتجآوز الأغنية الحآلية
+3༺༻  $stop ➼ إيقآف الأغنية مؤقتا
+4༺༻  $resume ➼ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
+5༺༻  $vol ➼ لتغيير درجة الصوت 100 - 0
+6༺༻  $leave ➼ لإخرآج البوت من الروم
+7༺༻  $np ➼ لمعرفة الأغنية المشغلة حآليا
+8༺༻  $queue ➼ لمعرفة قآئمة التشغيل
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+Click On ▶ To Go To Games Side
+   `,`
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+:video_game:Games Commands:video_game:
+1༺༻  $cut ➼ للعب لعبة كت تويت
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+   `,`
+   `]
+    let page = 1;
 
-   client.on("message", message => {
-       if (message.content === (prefix + "help")) {
-        const embed = new Discord.RichEmbed() 
-            .setColor("RANDOM")
-            .setThumbnail(message.author.avatarURL)
-            .setDescription(`**
-      __Admins Commands__ 
-      $ban ➼ حظر العضو من السيرفر
-      $kick ➼ طرد العضو من السيرفر
-      $clear ➼ مسح الشات
-      $createroles ➼ عمل رتب متكاملة للسيرفر
-      $clear ➼ ل مسح الشات بعدد محدد
-      $warn ➼ لاعطاء الشخص تحذير
-      $moveall ➼ لسحب جميع الداخلين ب الفويس
-      $voicesetup ➼ تصنع فويس تشانل مكتوب فيها عدد الاونلاين يلي في الفويس 
-      $mute ➼ لاعطاء الشخص ميوت
-      $unmute ➼ لفك الميوت عن الشخص
-      $mc ➼ لقفل الشات
-      $umc ➼ لفتح الشات 
-      $bc ➼ رسالة جماعية
-      $obc ➼ رسالة جماعية فقط للاونلاين
-      $ebc ➼ رسالة جماعية ب امبيد
-      $role @someone @role ➼ لاعطاء شخص رتبة
-      $role all @role ➼ لاعطاء الكل رتبة
-      $role bots @role ➼ لاعطاء البوتات رتبة
-      $role humans @role ➼ لاعطاء الاعضاء رتبة
-      $roleremove @someone @role ➼ لسحب رتبة من شخص
-      $roleremove all @role ➼ لسحب رتبة من الكل
-      $roleremove bots @role ➼ لسحب رتبة من البوتات
-      $roleremove humans @role ➼ لسحب رتبة من الاشخاص
-      By ➼ <@388357326614167563> 
-          **  `)
-message.author.sendEmbed(embed)
+    let embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setFooter(`Page ${page} of ${pages.length}`)
+    .setDescription(pages[page-1])
 
-}
-});  
+    message.author.sendEmbed(embed).then(msg => {
+
+        msg.react('◀').then( r => {
+            msg.react('▶')
 
 
-   
-   client.on("message", message => {
-       if (message.content === (prefix + "help")) {
-        const embed = new Discord.RichEmbed() 
-            .setColor("RANDOM")
-            .setThumbnail(message.author.avatarURL)
-            .setDescription(`**
-            __Music Commands__
-      $play ➼ لتشغيل أغنية برآبط أو بأسم
-      $skip ➼ لتجآوز الأغنية الحآلية
-      $stop ➼ إيقآف الأغنية مؤقتا
-      $resume ➼ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-      $vol ➼ لتغيير درجة الصوت 100 - 0
-      $leave ➼ لإخرآج البوت من الروم
-      $np ➼ لمعرفة الأغنية المشغلة حآليا
-      $queue ➼ لمعرفة قآئمة التشغيل
-      By ➼ <@388357326614167563> 
-          **  `)
-message.author.sendEmbed(embed)
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
 
-}
-});  
 
-   
-   client.on("message", message => {
-       if (message.content === (prefix + "help")) {
-        const embed = new Discord.RichEmbed() 
-            .setColor("RANDOM")
-            .setThumbnail(message.author.avatarURL)
-            .setDescription(`**
-      __Games Commands__
-      $cut ➼ للعب لعبة كت تويت
-      ✧▬▬▬▬▬▬ BOT System ▬▬▬▬▬▬✧
-      By ➼ <@388357326614167563> 
-          **  `)
-message.author.sendEmbed(embed)
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
 
-}
-});  
+
+
+        backwards.on('collect', r => {
+            if (page === 1) return;
+            page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        forwards.on('collect', r => {
+            if (page === pages.length) return;
+            page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        })
+    })
+    }
+});
+
+
+client.on('message', message => {
+if (message.content.startsWith(prefix + 'Help')) { /// And This is The Channel One Send The Help In Channel // Code By NotGucci
+    let pages = [`
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+:earth_africa: The Public Commands :earth_africa:
+1༺༻  $id ➼ عرض ملفك الشخصي
+2༺༻  $ask ➼ البوت يسئلك اسئلة
+3༺༻  $server ➼ احصائيات السيرفر
+4༺༻  $avatar ➼ عرض صورتك الشخصية
+5༺༻  $roll ➼ القرعة
+6༺༻  يعطيك رابط شغال ليوم واحد ➼ رابط
+7༺༻  $count ➼ كم عضو بالسيرفر
+8༺༻  $help ➼ عرض هذه الرسالة
+9༺༻  $ping ➼ لمعرفة سرعة استجابة البوت في الوقت الحالي
+10༺༻  $minc ➼ اسئلة عن ماين كرافت
+11༺༻  $invite ➼ يقول لك كم واحد انت مدخل
+12༺༻  $new ➼ لفتح تذكرة
+13༺༻  $inv ➼ لدعوة البوت الى سيرفرك
+14༺༻  $support ➼ سيرفر الدعم الفني للبوت
+15༺༻  $bot ➼ معلومات عن البوت
+16༺༻  $say ➼ البوت يكرر كلامك
+17༺༻  $say-embed ➼ البوت يكرر كلامك مع امبيد
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+Click On ▶ To Go Administor Side
+   `
+,`
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+:closed_lock_with_key: Administor Coomands:closed_lock_with_key:
+1༺༻  $ban ➼ حظر العضو من السيرفر
+2༺༻  $kick ➼ طرد العضو من السيرفر
+3༺༻  $clear ➼ مسح الشات
+4༺༻  $createroles ➼ عمل رتب متكاملة للسيرفر
+5༺༻  $clear ➼ ل مسح الشات بعدد محدد
+6༺༻  $warn ➼ لاعطاء الشخص تحذير
+7༺༻  $moveall ➼ لسحب جميع الداخلين ب الفويس
+8༺༻  $voicesetup ➼ تصنع فويس تشانل مكتوب فيها عدد الاونلاين يلي في الفويس
+9༺༻  $mute ➼ لاعطاء الشخص ميوت
+10༺༻  $unmute ➼ لفك الميوت عن الشخص
+11༺༻  $mc ➼ لقفل الشات
+12༺༻  $umc ➼ لفتح الشات
+13༺༻  $bc ➼ رسالة جماعية
+14༺༻  $obc ➼ رسالة جماعية فقط للاونلاين
+15༺༻  $ebc ➼ رسالة جماعية ب امبيد
+16༺༻  $role @someone @role ➼ لاعطاء شخص رتبة
+17༺༻  $role all @role ➼ لاعطاء الكل رتبة
+18༺༻  $role bots @role ➼ لاعطاء البوتات رتبة
+19༺༻  $role humans @role ➼ لاعطاء الاعضاء رتبة
+20༺༻  $roleremove @someone @role ➼ لسحب رتبة من شخص
+21༺༻  $roleremove all @role ➼ لسحب رتبة من الكل
+22༺༻  $roleremove bots @role ➼ لسحب رتبة من البوتات
+23༺༻  $roleremove humans @role ➼ لسحب رتبة من الاشخاص
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+Click On ▶ To Go To Music Side
+   `,`
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+:musical_note:Music Commands:musical_note:
+1༺༻  $play ➼ لتشغيل أغنية برآبط أو بأسم
+2༺༻  $stop ➼ إيقآف الأغنية مؤقتا
+3༺༻  $resume ➼ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
+4༺༻  $vol ➼ لتغيير درجة الصوت 100 - 0
+5༺༻  $leave ➼ لإخرآج البوت من الروم
+6༺༻  $np ➼ لمعرفة الأغنية المشغلة حآليا
+7༺༻  $queue ➼ لمعرفة قآئمة التشغيل
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+Click On ▶ To Go To Games Side
+  `,`
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+:video_game:Games Commands:video_game:
+1༺༻  $cut ➼ للعب لعبة كت تويت
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+   `]
+ let page = 1;
+
+    let embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setFooter(`Page ${page} of ${pages.length}`)
+    .setDescription(pages[page-1])
+
+    message.channel.sendEmbed(embed).then(msg => {
+
+        msg.react('◀').then( r => {
+            msg.react('▶')
+
+           setTimeout(() => {
+        msg.delete
+    }, 60 * 1000)
+
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
+
+
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
+
+
+
+        backwards.on('collect', r => {
+            if (page === 1) return;
+            page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        forwards.on('collect', r => {
+            if (page === pages.length) return;
+            page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        })
+    })
+    }
+});
+
 
 
 
