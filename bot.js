@@ -199,7 +199,7 @@ Click On ▶ To Go To Games Side
 
 
 client.on('message', message => {
-if (message.content.startsWith(prefix + 'Help')) { /// And This is The Channel One Send The Help In Channel // Code By NotGucci
+if (message.content.startsWith(prefix + 'help')) { /// And This is The Channel One Send The Help In Channel // Code By NotGucci
     let pages = [`
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 :earth_africa: The Public Commands :earth_africa:
