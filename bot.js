@@ -126,14 +126,6 @@ Click On ▶ To Go Administor Side
 13༺༻  $bc ➼ رسالة جماعية
 14༺༻  $obc ➼ رسالة جماعية فقط للاونلاين
 15༺༻  $ebc ➼ رسالة جماعية ب امبيد
-16༺༻  $role @someone @role ➼ لاعطاء شخص رتبة
-17༺༻  $role all @role ➼ لاعطاء الكل رتبة
-18༺༻  $role bots @role ➼ لاعطاء البوتات رتبة
-19༺༻  $role humans @role ➼ لاعطاء الاعضاء رتبة
-20༺༻  $roleremove @someone @role ➼ لسحب رتبة من شخص
-21༺༻  $roleremove all @role ➼ لسحب رتبة من الكل
-22༺༻  $roleremove bots @role ➼ لسحب رتبة من البوتات
-23༺༻  $roleremove humans @role ➼ لسحب رتبة من الاشخاص
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 Click On ▶ To Go To Music Side
    `,`
@@ -241,14 +233,6 @@ Click On ▶ To Go Administor Side
 13༺༻  $bc ➼ رسالة جماعية
 14༺༻  $obc ➼ رسالة جماعية فقط للاونلاين
 15༺༻  $ebc ➼ رسالة جماعية ب امبيد
-16༺༻  $role @someone @role ➼ لاعطاء شخص رتبة
-17༺༻  $role all @role ➼ لاعطاء الكل رتبة
-18༺༻  $role bots @role ➼ لاعطاء البوتات رتبة
-19༺༻  $role humans @role ➼ لاعطاء الاعضاء رتبة
-20༺༻  $roleremove @someone @role ➼ لسحب رتبة من شخص
-21༺༻  $roleremove all @role ➼ لسحب رتبة من الكل
-22༺༻  $roleremove bots @role ➼ لسحب رتبة من البوتات
-23༺༻  $roleremove humans @role ➼ لسحب رتبة من الاشخاص
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 Click On ▶ To Go To Music Side
    `,`
