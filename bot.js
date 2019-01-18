@@ -35,6 +35,16 @@ client.on('message', message => {
 }
 });
 
+
+client.on("guildCreate", guild => {
+    client.channels.get("535970680903041044").send(' ***  BOT  ***   **Join To**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+    });
+
+    client.on("guildDelete", guild => {
+    client.channels.get("531359646485839892").send(' ***  BOT  ***   **Leave From**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+    });
+
+
 const prefix = '$'
 
 client.on('message', message => {
