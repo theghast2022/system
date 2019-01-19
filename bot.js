@@ -37,13 +37,26 @@ client.on('message', message => {
 
 
 client.on("guildCreate", guild => {
-    client.channels.get("535970680903041044").send(' ***  BOT  ***   **Join To**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
-    });
+  //client.channels.get("535970680903041044").send(' ***  BOT  ***   **Join To**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+  let sEmbed = new Discord.RichEmbed().setDescription(`***  BOT  ***   **Join To**   ***[ ${guild.name} ] ***\n   
+**  Owner  [<@${guild.ownerID}>] || 
+  Owner ID [${guild.ownerID}] || 
+  Owner No Mention [${guild.owner.user.username}]**`).setThumbnail(guild.iconURL)
+  client.channels.get("535970680903041044").send({
+    embed : sEmbed
+  });
+});
 
-    client.on("guildDelete", guild => {
-    client.channels.get("531359646485839892").send(' ***  BOT  ***   **Leave From**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
-    });
-
+client.on("guildDelete", guild => {
+  //client.channels.get("531359646485839892").send(' ***  BOT  ***   **Leave From**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+  let sEmbed = new Discord.RichEmbed().setDescription (` ***  BOT  ***   **Leave From**   ***[ ' + ${guild.name} + ' ]***\n
+**  Owner [<@${guild.ownerID}>] ||
+  Owner ID [${guild.ownerID}] ||
+  Owner No Mention [${guild.owner.user.username}]**`).setThumbnail(guild.iconURL)
+  client.channels.get("531359646485839892").send({
+	embed : sEmbed
+  });
+});
 
 const prefix = '$'
 
