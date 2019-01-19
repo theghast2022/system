@@ -188,8 +188,8 @@ Click On ▶ To Go To Games Side
         const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
 
 
-        const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
-        const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 1000});
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 1000});
 
 
 
@@ -296,8 +296,8 @@ Click On ▶ To Go To Games Side
         const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
 
 
-        const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
-        const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 10000});
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 10000});
 
 
 
