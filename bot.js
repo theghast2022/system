@@ -107,70 +107,112 @@ if (message.content.startsWith(prefix + 'ply')) {
 
 });
 client.on('message', message => {
-if (message.content.startsWith(prefix + 'PHelp')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
+if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
     let pages = [`
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-:earth_africa: The Public Commands :earth_africa:
-1༺༻  $id ➼ عرض ملفك الشخصي
-2༺༻  $ask ➼ البوت يسئلك اسئلة
-3༺༻  $server ➼ احصائيات السيرفر
-4༺༻  $avatar ➼ عرض صورتك الشخصية
-5༺༻  $roll ➼ القرعة
-6༺༻  يعطيك رابط شغال ليوم واحد ➼ رابط
-7༺༻  $count ➼ كم عضو بالسيرفر
-8༺༻  $help ➼ عرض هذه الرسالة
-9༺༻  $ping ➼ لمعرفة سرعة استجابة البوت في الوقت الحالي
-10༺༻ $minc ➼ اسئلة عن ماين كرافت
-11༺༻ $invite ➼ يقول لك كم واحد انت مدخل
-12༺༻ $new ➼ لفتح تذكرة
-13༺༻ $inv ➼ لدعوة البوت الى سيرفرك
-14༺༻ $support ➼ سيرفر الدعم الفني للبوت
-15༺༻ $bot ➼ معلومات عن البوت
-16༺༻ $say ➼ البوت يكرر كلامك
-17༺༻ $say-embed ➼ البوت يكرر كلامك مع امبيد
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-Click On ▶ To Go Administor Side
-   `
+***__وصف عن البوت__***
+**
+:gem:  البوت فيه كثير ميزات حلوة و جميلة
+ ا:rocket: البوت يعمل 24 ساعه
+
+**
+        ***__General orders__***
+**
+?${prefix}allbots/لعرض جميع البوتات الي بالسيرفر?
+?${prefix}server/يعرض لك معلومات عن السيرفر?
+?${prefix}bot/يعرض لك كل معلومات البوت?
+?${prefix}count/يعرض لك عدد الاشخاص بالسيرفر بدون بوتات?
+?${prefix}invites/ يعرض لك  عدد انفايتاتك بالسيرفر ?
+?${prefix}invinfo <invitelink here> / لمعلومات عن الدعوه?
+? مثال : invinfo m82n8P
+?${prefix}invite-codes/يعرض لك روابط الانفايتات حكك في السيرفر ?
+?${prefix}cal/اله حاسبة?
+?${prefix}trans <language> <any thing>/يترجم لك الي تبيه من اي لغة?
+?${prefix}short/يختصر لك رابط كبير الى رابط صغير?
+?${prefix}tag/يكتب لك الكلمة بشكل جميل وكبير?
+?${prefix}google/للبحث في قوقل عن طريق الدسكورد?
+?${prefix}perms/يعرض لك برمشناتك بالسيرفر?
+?${prefix}z5rf/يزخرف لك كلمة او جملة?
+?${prefix}rooms/يعرض لك كل الرومات الي بالسيرفر مع عددها?
+?${prefix}roles/يعرض لك كل الرانكات بالسيرفر بشكل جميل?
+?${prefix}emojilist/يعرض لك كل الايموجيات الي بالسيرفر?
+?${prefix}say/يكرر الكلام الي تكتبو?
+?${prefix}image/صورة السيرفر?
+?${prefix}members/عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص?
+?${prefix}id/معلومات عنك?
+?${prefix}bans / عدد الاشخاص المبندة ?
+?${prefix}avatar/صورتك او صورة الي تمنشنو?
+?${prefix}embed/يكرر الي تقولو بشكل حلو?
+?${prefix}emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي?
+?${prefix}inv/لدعوة البوت الى سيرفرك?
+?${prefix}support/سيرفر الدعم?
+?${prefix}contact/ارسال اقتراح او لمراسلة صاحب البوت?
+**
+  `
 ,`
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-:closed_lock_with_key: Administor Coomands:closed_lock_with_key:
-1༺༻  $ban ➼ حظر العضو من السيرفر
-2༺༻  $kick ➼ طرد العضو من السيرفر
-3༺༻  $clear ➼ مسح الشات
-4༺༻  $createroles ➼ عمل رتب متكاملة للسيرفر
-5༺༻  $clear ➼ ل مسح الشات بعدد محدد
-6༺༻  $warn ➼ لاعطاء الشخص تحذير
-7༺༻  $moveall ➼ لسحب جميع الداخلين ب الفويس
-8༺༻  $voicesetup ➼ تصنع فويس تشانل مكتوب فيها عدد الاونلاين يلي في الفويس
-9༺༻  $mute ➼ لاعطاء الشخص ميوت
-10༺༻  $unmute ➼ لفك الميوت عن الشخص
-11༺༻  $mc ➼ لقفل الشات
-12༺༻  $umc ➼ لفتح الشات
-13༺༻  $bc ➼ رسالة جماعية
-14༺༻  $obc ➼ رسالة جماعية فقط للاونلاين
-15༺༻  $ebc ➼ رسالة جماعية ب امبيد
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-Click On ▶ To Go To Music Side
+        ***__Administrative Orders__***
+**
+?${prefix}move @user /  لسحب الشخص الى روومك?
+?${prefix}bc / رسالة جماعية الى كل اعضاء السيرفر?
+?${prefix}bk / رسالة جماعيه مع?
+?${prefix}rolebc <everyone or @role> / راسال رساله جماعيه لرتبه محدده?
+?${prefix}role @user <rank> / لأعطاء رتبة لعضو معين?
+?${prefix}roleremove @user <rank> / لازالة الرتبة من شخص معين?
+?${prefix}give all <rank> / لأعطاء رتبة للجميع?
+?${prefix}give humans <rank> / لأعطاء رتبة للاشخاص فقط?
+?${prefix}give bots <rank> / لأعطاء رتبة لجميع البوتات?
+?${prefix}hchannel / اخفاء الشات?
+?${prefix}schannel / اضهار الشات المخفية?
+?${prefix}clr <numbr> / مسح الشات بعدد?
+?${prefix}clear / مسح الشات?
+?${prefix}mute @user <time> / اعطاء العضو ميوت ?
+?${prefix}unmute @user / لفك الميوت عن الشخص ?
+?${prefix}kick @user <reason> / طرد الشخص من السيرفر?
+?${prefix}ban @user <reason> / حضر الشخص من السيرفر?
+?${prefix}mutechannel / تقفيل الشات?
+?${prefix}unmutechannel / فتح الشات?
+?${prefix}dc / مسح كل الرومات?
+?${prefix}dr / <مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات?
+?${prefix}ct <name> / انشاء شات?
+?${prefix}cv <name> / انشاء رووم فويس?
+?${prefix}temp / لانشاء روم مؤقت?
+?${prefix}delet <name> / مسح الشات او الرووم فويس?
+?${prefix}make <number> / ينشا لك الوان مع كم الوان تبي?
+?${prefix}color <number> / لختيار لون?
+?${prefix}deletecolors <number> / لحذف الالوان?
+**
    `,`
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-:musical_note:Music Commands:musical_note:
-1༺༻  $play ➼ لتشغيل أغنية برآبط أو بأسم
-2༺༻  $skip ➼ لتجآوز الأغنية الحآلية
-3༺༻  $stop ➼ إيقآف الأغنية مؤقتا
-4༺༻  $resume ➼ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-5༺༻  $vol ➼ لتغيير درجة الصوت 100 - 0
-6༺༻  $leave ➼ لإخرآج البوت من الروم
-7༺༻  $np ➼ لمعرفة الأغنية المشغلة حآليا
-8༺༻  $queue ➼ لمعرفة قآئمة التشغيل
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-Click On ▶ To Go To Games Side
-   `,`
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-:video_game:Games Commands:video_game:
-1༺༻  $cut ➼ للعب لعبة كت تويت
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-   `,`
-   `]
+        ***__Music orders__***
+**
+?${prefix}play / لتشغيل أغنية برآبط أو بأسم?
+?${prefix}skip / لتجآوز الأغنية الحآلية?
+?${prefix}pause / إيقآف الأغنية مؤقتا?
+?${prefix}resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا?
+?${prefix}vol / لتغيير درجة الصوت 100 - 0?
+?${prefix}stop / لإخرآج البوت من الروم?
+?${prefix}np / لمعرفة الأغنية المشغلة حآليا?
+?${prefix}queue / لمعرفة قآئمة التشغيل?
+**
+        ***__Games orders__***
+ **
+?${prefix}rps / حجر ورقة مقص?
+?${prefix}speed / اسرع كتابة?
+?${prefix}quas / اسئلة عامة?
+?${prefix}نكت / نكت ?
+?${prefix}لعبة فكك / فكك?
+?${prefix}عواصم عشوائي/عواصم?
+?${prefix}لعبة كت تويت / كت تويت?
+?${prefix}roll <number> / قرعة?
+?${prefix}لو خيروك بطريقة حلوة / لو خيروك?
+?${prefix}لعبة مريم / مريم?
+?${prefix}فوائد ونصائح  / هل تعلم?
+?${prefix}يعطيك عقابات قاسية / عقاب ?
+?=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.?
+?welcome يتم الترحيب فى روم باسم?
+?G.setwelcomer <text channel name> لاختيار روم للترحيب?
+?${prefix}voiceonline / لتفعيل روم الفويس اونلاين?
+**
+
+`]
     let page = 1;
 
     let embed = new Discord.RichEmbed()
@@ -183,114 +225,6 @@ Click On ▶ To Go To Games Side
         msg.react('◀').then( r => {
             msg.react('▶')
 
-
-        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
-        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
-
-
-        const backwards = msg.createReactionCollector(backwardsFilter, { time: 200000});
-        const forwards = msg.createReactionCollector(forwardsFilter, { time: 200000});
-
-
-
-        backwards.on('collect', r => {
-            if (page === 1) return;
-            page--;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length}`);
-            msg.edit(embed)
-        })
-        forwards.on('collect', r => {
-            if (page === pages.length) return;
-            page++;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length}`);
-            msg.edit(embed)
-        })
-        })
-    })
-    }
-});
-
-
-client.on('message', message => {
-if (message.content.startsWith(prefix + 'help')) { /// And This is The Channel One Send The Help In Channel // Code By NotGucci
-    let pages = [`
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-:earth_africa: The Public Commands :earth_africa:
-1༺༻  $id ➼ عرض ملفك الشخصي
-2༺༻  $ask ➼ البوت يسئلك اسئلة
-3༺༻  $server ➼ احصائيات السيرفر
-4༺༻  $avatar ➼ عرض صورتك الشخصية
-5༺༻  $roll ➼ القرعة
-6༺༻  يعطيك رابط شغال ليوم واحد ➼ رابط
-7༺༻  $count ➼ كم عضو بالسيرفر
-8༺༻  $help ➼ عرض هذه الرسالة
-9༺༻  $ping ➼ لمعرفة سرعة استجابة البوت في الوقت الحالي
-10༺༻  $minc ➼ اسئلة عن ماين كرافت
-11༺༻  $invite ➼ يقول لك كم واحد انت مدخل
-12༺༻  $new ➼ لفتح تذكرة
-13༺༻  $inv ➼ لدعوة البوت الى سيرفرك
-14༺༻  $support ➼ سيرفر الدعم الفني للبوت
-15༺༻  $bot ➼ معلومات عن البوت
-16༺༻  $say ➼ البوت يكرر كلامك
-17༺༻  $say-embed ➼ البوت يكرر كلامك مع امبيد
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-Click On ▶ To Go Administor Side
-   `
-,`
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-:closed_lock_with_key: Administor Coomands:closed_lock_with_key:
-1༺༻  $ban ➼ حظر العضو من السيرفر
-2༺༻  $kick ➼ طرد العضو من السيرفر
-3༺༻  $clear ➼ مسح الشات
-4༺༻  $createroles ➼ عمل رتب متكاملة للسيرفر
-5༺༻  $clear ➼ ل مسح الشات بعدد محدد
-6༺༻  $warn ➼ لاعطاء الشخص تحذير
-7༺༻  $moveall ➼ لسحب جميع الداخلين ب الفويس
-8༺༻  $voicesetup ➼ تصنع فويس تشانل مكتوب فيها عدد الاونلاين يلي في الفويس
-9༺༻  $mute ➼ لاعطاء الشخص ميوت
-10༺༻  $unmute ➼ لفك الميوت عن الشخص
-11༺༻  $mc ➼ لقفل الشات
-12༺༻  $umc ➼ لفتح الشات
-13༺༻  $bc ➼ رسالة جماعية
-14༺༻  $obc ➼ رسالة جماعية فقط للاونلاين
-15༺༻  $ebc ➼ رسالة جماعية ب امبيد
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-Click On ▶ To Go To Music Side
-   `,`
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-:musical_note:Music Commands:musical_note:
-1༺༻  $play ➼ لتشغيل أغنية برآبط أو بأسم
-2༺༻  $stop ➼ إيقآف الأغنية مؤقتا
-3༺༻  $resume ➼ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-4༺༻  $vol ➼ لتغيير درجة الصوت 100 - 0
-5༺༻  $leave ➼ لإخرآج البوت من الروم
-6༺༻  $np ➼ لمعرفة الأغنية المشغلة حآليا
-7༺༻  $queue ➼ لمعرفة قآئمة التشغيل
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-Click On ▶ To Go To Games Side
-  `,`
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-:video_game:Games Commands:video_game:
-1༺༻  $cut ➼ للعب لعبة كت تويت
-༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-   `]
- let page = 1;
-
-    let embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setFooter(`Page ${page} of ${pages.length}`)
-    .setDescription(pages[page-1])
-
-    message.channel.sendEmbed(embed).then(msg => {
-
-        msg.react('◀').then( r => {
-            msg.react('▶')
-
-           setTimeout(() => {
-        msg.delete
-    }, 60 * 1000)
 
         const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
         const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
@@ -310,7 +244,8 @@ Click On ▶ To Go To Games Side
         })
         forwards.on('collect', r => {
             if (page === pages.length) return;
-            page++;
+
+      page++;
             embed.setDescription(pages[page-1]);
             embed.setFooter(`Page ${page} of ${pages.length}`);
             msg.edit(embed)
