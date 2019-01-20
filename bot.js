@@ -222,11 +222,6 @@ https://discordapp.com/api/oauth2/authorize?client_id=513291971234758667&permiss
    }
    });
 
-
-
-
-
-
 client.on('message', message => {
     var prefix = "$"
 var args = message.content.split(" ").slice(1);    
