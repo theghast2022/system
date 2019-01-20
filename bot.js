@@ -157,7 +157,6 @@ client.on("message", message => {
         $bc ➼ رسالة جماعية
         $obc ➼ رسالة جماعية فقط للاونلاين
         $ebc ➼ رسالة جماعية ب امبيد
-        $delar ➼ لحذف جميع الرتب (ملاحظة : يجب ان تكون رتبة البوت فوق كل الرتب)
 `)
    message.author.sendEmbed(embed)
 
