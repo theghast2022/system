@@ -1310,21 +1310,6 @@ const pubg = [
  }
 });
 
-client.on("message", msg => {
- if(!msg.guild.member(msg.author).hasPermission("MANAGE_ROLES")) return msg.reply("انت لا تملك صلاحيات ").then(msgS => msgS.delete(5000));
-              if(!msg.guild.member(client.user).hasPermission("MANAGE_ROLES")) return msg.reply("البوت لا يمتك صلاحيات ").then(msgS => msgS.delete(5000));;
-var prefix = '$';//�������
-if(msg.content.startsWith(prefix + "delar")){
-msg.delete();
-var roles = msg.guild.roles.forEach(m =>{
-m.delete();
-})
-msg.reply("تم بنجاح").then(p => {
-p.edit("✅")
-p.delete(1700);
-})
-}
-});
 
 
 
