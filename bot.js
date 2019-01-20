@@ -106,154 +106,138 @@ if (message.content.startsWith(prefix + 'ply')) {
 
 
 });
-client.on('message', message => {
-if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
-    let pages = [`
-***__وصف عن البوت__***
-**
-:gem:  البوت فيه كثير ميزات حلوة و جميلة
- ا:rocket: البوت يعمل 24 ساعه
 
-**
-        ***__General orders__***
-**
-?${prefix}allbots/لعرض جميع البوتات الي بالسيرفر?
-?${prefix}server/يعرض لك معلومات عن السيرفر?
-?${prefix}bot/يعرض لك كل معلومات البوت?
-?${prefix}count/يعرض لك عدد الاشخاص بالسيرفر بدون بوتات?
-?${prefix}invites/ يعرض لك  عدد انفايتاتك بالسيرفر ?
-?${prefix}invinfo <invitelink here> / لمعلومات عن الدعوه?
-? مثال : invinfo m82n8P
-?${prefix}invite-codes/يعرض لك روابط الانفايتات حكك في السيرفر ?
-?${prefix}cal/اله حاسبة?
-?${prefix}trans <language> <any thing>/يترجم لك الي تبيه من اي لغة?
-?${prefix}short/يختصر لك رابط كبير الى رابط صغير?
-?${prefix}tag/يكتب لك الكلمة بشكل جميل وكبير?
-?${prefix}google/للبحث في قوقل عن طريق الدسكورد?
-?${prefix}perms/يعرض لك برمشناتك بالسيرفر?
-?${prefix}z5rf/يزخرف لك كلمة او جملة?
-?${prefix}rooms/يعرض لك كل الرومات الي بالسيرفر مع عددها?
-?${prefix}roles/يعرض لك كل الرانكات بالسيرفر بشكل جميل?
-?${prefix}emojilist/يعرض لك كل الايموجيات الي بالسيرفر?
-?${prefix}say/يكرر الكلام الي تكتبو?
-?${prefix}image/صورة السيرفر?
-?${prefix}members/عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص?
-?${prefix}id/معلومات عنك?
-?${prefix}bans / عدد الاشخاص المبندة ?
-?${prefix}avatar/صورتك او صورة الي تمنشنو?
-?${prefix}embed/يكرر الي تقولو بشكل حلو?
-?${prefix}emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي?
-?${prefix}inv/لدعوة البوت الى سيرفرك?
-?${prefix}support/سيرفر الدعم?
-?${prefix}contact/ارسال اقتراح او لمراسلة صاحب البوت?
-**
-  `
-,`
-        ***__Administrative Orders__***
-**
-?${prefix}move @user /  لسحب الشخص الى روومك?
-?${prefix}bc / رسالة جماعية الى كل اعضاء السيرفر?
-?${prefix}bk / رسالة جماعيه مع?
-?${prefix}rolebc <everyone or @role> / راسال رساله جماعيه لرتبه محدده?
-?${prefix}role @user <rank> / لأعطاء رتبة لعضو معين?
-?${prefix}roleremove @user <rank> / لازالة الرتبة من شخص معين?
-?${prefix}give all <rank> / لأعطاء رتبة للجميع?
-?${prefix}give humans <rank> / لأعطاء رتبة للاشخاص فقط?
-?${prefix}give bots <rank> / لأعطاء رتبة لجميع البوتات?
-?${prefix}hchannel / اخفاء الشات?
-?${prefix}schannel / اضهار الشات المخفية?
-?${prefix}clr <numbr> / مسح الشات بعدد?
-?${prefix}clear / مسح الشات?
-?${prefix}mute @user <time> / اعطاء العضو ميوت ?
-?${prefix}unmute @user / لفك الميوت عن الشخص ?
-?${prefix}kick @user <reason> / طرد الشخص من السيرفر?
-?${prefix}ban @user <reason> / حضر الشخص من السيرفر?
-?${prefix}mutechannel / تقفيل الشات?
-?${prefix}unmutechannel / فتح الشات?
-?${prefix}dc / مسح كل الرومات?
-?${prefix}dr / <مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات?
-?${prefix}ct <name> / انشاء شات?
-?${prefix}cv <name> / انشاء رووم فويس?
-?${prefix}temp / لانشاء روم مؤقت?
-?${prefix}delet <name> / مسح الشات او الرووم فويس?
-?${prefix}make <number> / ينشا لك الوان مع كم الوان تبي?
-?${prefix}color <number> / لختيار لون?
-?${prefix}deletecolors <number> / لحذف الالوان?
-**
-   `,`
-        ***__Music orders__***
-**
-?${prefix}play / لتشغيل أغنية برآبط أو بأسم?
-?${prefix}skip / لتجآوز الأغنية الحآلية?
-?${prefix}pause / إيقآف الأغنية مؤقتا?
-?${prefix}resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا?
-?${prefix}vol / لتغيير درجة الصوت 100 - 0?
-?${prefix}stop / لإخرآج البوت من الروم?
-?${prefix}np / لمعرفة الأغنية المشغلة حآليا?
-?${prefix}queue / لمعرفة قآئمة التشغيل?
-**
-        ***__Games orders__***
- **
-?${prefix}rps / حجر ورقة مقص?
-?${prefix}speed / اسرع كتابة?
-?${prefix}quas / اسئلة عامة?
-?${prefix}نكت / نكت ?
-?${prefix}لعبة فكك / فكك?
-?${prefix}عواصم عشوائي/عواصم?
-?${prefix}لعبة كت تويت / كت تويت?
-?${prefix}roll <number> / قرعة?
-?${prefix}لو خيروك بطريقة حلوة / لو خيروك?
-?${prefix}لعبة مريم / مريم?
-?${prefix}فوائد ونصائح  / هل تعلم?
-?${prefix}يعطيك عقابات قاسية / عقاب ?
-?=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.?
-?welcome يتم الترحيب فى روم باسم?
-?G.setwelcomer <text channel name> لاختيار روم للترحيب?
-?${prefix}voiceonline / لتفعيل روم الفويس اونلاين?
-**
+client.on("message", message => {
+    if (message.content === `${prefix}help`) {
+  const embed = new Discord.RichEmbed()
+      .setColor("#111111")
+      .setDescription(`
+      __All Commands__
+        $id ➼ عرض ملفك الشخصي
+        $server ➼ احصائيات السيرفر
+        $avatar ➼ عرض صورتك الشخصية
+        $roll ➼ القرعة
+        يعطيك رابط شغال ليوم واحد ➼ رابط
+        $count ➼ كم عضو بالسيرفر
+        $help ➼ عرض هذه الرسالة
+        $ping ➼ لمعرفة سرعة استجابة البوت في الوقت الحالي
+        $minc ➼ اسئلة عن ماين كرافت
+        $invite ➼ يقول لك كم واحد انت مدخل
+        $new ➼ لفتح تذكرة
+        $inv ➼ لدعوة البوت الى سيرفرك
+        $support ➼ سيرفر الدعم الفني للبوت
+        $bot ➼ معلومات عن البوت
+        $say ➼ البوت يكرر كلامك
+        $say-embed ➼ البوت يكرر كلامك مع امبيد
+ `)
+.setThumbnail(message.author.avatarURL)
+.setFooter(message.author.username, message.author.avatarURL)
+   message.author.sendEmbed(embed)
 
-`]
-    let page = 1;
-
-    let embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setFooter(`Page ${page} of ${pages.length}`)
-    .setDescription(pages[page-1])
-
-    message.author.sendEmbed(embed).then(msg => {
-
-        msg.react('◀').then( r => {
-            msg.react('▶')
+   }
+   });
 
 
-        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
-        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
+   client.on("message", message => {
+    if (message.content === `${prefix}help`) {
+  const embed = new Discord.RichEmbed()
+      .setColor("#111111")
+      .setDescription(`
+      __Admins Commands__
+        $ban ➼ حظر العضو من السيرفر
+        $kick ➼ طرد العضو من السيرفر
+        $clear ➼ مسح الشات
+        $createroles ➼ عمل رتب متكاملة للسيرفر
+        $clear ➼ ل مسح الشات بعدد محدد
+        $warn ➼ لاعطاء الشخص تحذير
+        $moveall ➼ لسحب جميع الداخلين ب الفويس
+        $voicesetup ➼ تصنع فويس تشانل مكتوب فيها عدد الاونلاين يلي في الفويس
+        $mute ➼ لاعطاء الشخص ميوت
+        $unmute ➼ لفك الميوت عن الشخص
+        $mc ➼ لقفل الشات
+        $umc ➼ لفتح الشات
+        $bc ➼ رسالة جماعية
+        $obc ➼ رسالة جماعية فقط للاونلاين
+        $ebc ➼ رسالة جماعية ب امبيد
+        $role @someone @role ➼ لاعطاء شخص رتبة
+        $role all @role ➼ لاعطاء الكل رتبة
+        $role bots @role ➼ لاعطاء البوتات رتبة
+        $role humans @role ➼ لاعطاء الاعضاء رتبة
+        $roleremove @someone @role ➼ لسحب رتبة من شخص
+        $roleremove all @role ➼ لسحب رتبة من الكل
+        $roleremove bots @role ➼ لسحب رتبة من البوتات
+        $roleremove humans @role ➼ لسحب رتبة من الاشخاص
+ `)
+.setThumbnail(message.author.avatarURL)
+.setFooter(message.author.username, message.author.avatarURL)
+   message.author.sendEmbed(embed)
+
+   }
+   });
 
 
-        const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
-        const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
+   client.on("message", message => {
+    if (message.content === `${prefix}help`) {
+  const embed = new Discord.RichEmbed()
+      .setColor("#111111")
+      .setDescription(`
+      __Music Commands__
+        $play ➼ لتشغيل أغنية برآبط أو بأسم
+        $skip ➼ لتجآوز الأغنية الحآلية
+        $stop ➼ إيقآف الأغنية مؤقتا
+        $resume ➼ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
+        $vol ➼ لتغيير درجة الصوت 100 - 0
+        $leave ➼ لإخرآج البوت من الروم
+        $np ➼ لمعرفة الأغنية المشغلة حآليا
+        $queue ➼ لمعرفة قآئمة التشغيل
+ `)
+.setThumbnail(message.author.avatarURL)
+.setFooter(message.author.username, message.author.avatarURL)
+   message.author.sendEmbed(embed)
+
+   }
+   });
 
 
 
-        backwards.on('collect', r => {
-            if (page === 1) return;
-            page--;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length}`);
-            msg.edit(embed)
-        })
-        forwards.on('collect', r => {
-            if (page === pages.length) return;
+   client.on("message", message => {
+    if (message.content === `${prefix}help`) {
+  const embed = new Discord.RichEmbed()
+      .setColor("#111111")
+      .setDescription(`
+      __Games Commands__
+        $cut ➼ للعب لعبة كت تويت
+        $pubg ➼ اسئلة عن لعبة ببجي
+        $ask ➼ البوت يسئلك اسئلة
+ `)
+.setThumbnail(message.author.avatarURL)
+.setFooter(message.author.username, message.author.avatarURL)
+   message.author.sendEmbed(embed)
 
-      page++;
-            embed.setDescription(pages[page-1]);
-            embed.setFooter(`Page ${page} of ${pages.length}`);
-            msg.edit(embed)
-        })
-        })
-    })
-    }
-});
+   }
+   });
+
+
+   client.on("message", message => {
+    if (message.content === `${prefix}help`) {
+  const embed = new Discord.RichEmbed()
+      .setColor("#111111")
+      .setDescription(`
+Support Server ➼
+https://discord.gg/p6WKSDq
+
+Develope By ➼ <@388357326614167563>
+
+For invite bot ➼
+https://discordapp.com/api/oauth2/authorize?client_id=513291971234758667&permissions=8&scope=bot
+ `)
+.setThumbnail(message.author.avatarURL)
+.setFooter(message.author.username, message.author.avatarURL)
+   message.author.sendEmbed(embed)
+
+   }
+   });
+
 
 
 
@@ -316,7 +300,7 @@ client.on('message', function(msg) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(msg.guild.iconURL)
-      .setTitle(`Showing Details Of  **${msg.guild.name}*`)
+      .setTitle(`Showing Details Of  **${msg.guild.name}**`)
       .addField(':globe_with_meridians:** نوع السيرفر**',`[** __${msg.guild.region}__ **]`,true)
       .addField(':medal:** __الرتب__**',`[** __${msg.guild.roles.size}__ **]`,true)
       .addField(':red_circle:**__ عدد الاعضاء__**',`[** __${msg.guild.memberCount}__ **]`,true)
@@ -537,14 +521,6 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
 }
 });
 
-  client.on("guildDelete", guild => {
-  let embed = new Discord.RichEmbed ()
-  .setTitle('Bot Logs')
-  .addField(' **Bot left from :**[' + `${guild.name}` + ']     **By : **' + `${guild.owner.user.username}` +  ' ')
-  .setFooter('The bot is crying')
-  .setTimestamp()
-  client.channels.get("531359646485839892").send(embed)
-});
 
 
 client.on('message', message => {
@@ -1295,6 +1271,65 @@ client.on("guildMemberAdd", member => {
   الدعم الفني : https://discord.gg/p6WKSDq  `) 
   }).catch(console.error)
   })
+
+
+const pubg = [
+     'PUBG | ما هو اقوي سلاح برائيك ؟',
+     'PUBG | اين تجد سلاح الجروزا ؟ Grozza',
+     'PUBG | ماذا تفضل اكثر ام فور ام سكار ؟',
+     'PUBG | ايهما تفضل vss ام Awm',
+     'PUBG | ماذا تفضل اكثر ؟ سولو ام سكواد ؟',
+     'PUBG | كم جيم كسبت في العبه ؟',
+     'PUBG | ما هو اكثر عدد قتلت في مسيرتك بالعبه',
+     'PUBG | اذا انت المركز ال 2 هل سوف تقوم بتمشي علي رجلك ام ستاخذ سياره تحميك ؟',
+     'PUBG | اذا وجدت شخصين يتقاتلان , هل سوف تتقاتل معهم ام تنتظر قليلا حتي يقتل احدهما الاخر ؟',
+     'PUBG | اذا صديقك بالاسكواد يحتاج مساعده هل تساعده ام تتركه ؟',
+     'PUBG | اذا تم عمل لصديقك كونك اوت وامامك لوت كثير جدا سوف تذهب لتساعده ام تاخذ الوت وتدعه يموت ؟',
+     'PUBG | اين تجد ملابس القناصه ؟ ghillie suit ?',
+     'PUBG | ايهما تفضل ؟ الاختباء حتي يتبقي اشخاص قليله ام تذهب لتقتل ولا تختبئ',
+     'PUBG | اين تفضل ان تهبط من الطائره ؟ الاماكن الهادئيا لوت صغير ام الاماكن المزدحمه بالاعبين لاكن لوت كثير',
+     'PUBG | كم عدد المرات التي فزت بها لوحدك سولو ؟',
+     'PUBG | ما هو افضل سلاح تجيد استخدامه ؟',
+     'PUBG | ما هو اندر سلاح قد تجده برائيك ؟',
+     'PUBG | ما هو اندر سلاح جديد قد تجده برائيك ؟',
+     'PUBG | ما هو عدوك في العبه لاق البنق ام لاق الفريمات الاف بي اس ؟',
+     'PUBG | ايهما تفضل العب ؟ فـ المساء ام الصباح ؟',
+     'PUBG | هل تحب ان يكون الجيم ملئ بلاعبين ام لاعبين قليلين ؟',
+     'PUBG | هل الملابس تعبر عن انك محترف ام لا ؟',
+     'PUBG | كم معك من مال ( كوين ) بلعبه ؟',
+     'PUBG | ما هو اكثر شئ تكرهه في العبه ؟',
+     'PUBG | ما هو اكثر شئ تحبه بلعبه ؟',
+     'PUBG | ماذا تفضل شتو قن ( بندقيه ) ام قناصه ؟',
+     'PUBG | ماذا تفضل اكثر ؟ درع لفل 3 متضرر ام درع لفل 2 غير متضرر',
+     'PUBG | تفضل ان تلعب مع صديقك سكواد ام شخص غريب ؟',
+     'PUBG | هل تظن انك افضل شخص في اصدقائك بهذه اللعبه؟',
+     'PUBG | قيم نفسك من 10 كـ احتراف لك بالعبه',
+     'PUBG | هل فزت جيم من قبل بالعبه ؟',
+     'PUBG | هل وصلت للمركز ال 10 ( توب 10 ) قبل هكذا بلعبه ؟',
+     'PUBG | هل قمت بلعب مع صديقك من قبل بلعبه ؟',
+     'PUBG | هل تعلم من اخترع العبه ؟',
+     'PUBG | لو خيروك لعبه ببجي ام فورت نايت ؟',
+     'PUBG | هل يوجد شخص من اصدقاءك محترف اكثر منك ام انت اكثر شخص محترف ما بين اصدقاءك ؟',
+     'PUBG | اذا كنت من فريق مطورين العبه ماذا ستفعل ؟',
+     'PUBG | قيم من 10 مدي حبك للعبه',
+     'PUBG | هل تحب ان تتكلم صوت مع اصدقاءك وانت تلعب معاهم ام لا تحب هذا الامر ؟',
+ 
+]
+   client.on('message', message => {
+       if (message.author.bot) return;
+ if (message.content.startsWith('$pubg')) {
+     if(!message.channel.guild) return message.reply('** This command only for servers **');
+  var client= new Discord.RichEmbed()
+  .setTitle("لعبه اسئله باتل جرواند")
+  .setColor('#FFA500')
+  .setDescription(`${pubg[Math.floor(Math.random() * pubg.length)]}`)
+  .setImage("https://cdn.discordapp.com/attachments/416617103492251658/477741838292484127/pubg-orange-square.png")
+                  .setTimestamp()
+ 
+   message.channel.sendEmbed(client);
+   message.react("??")
+ }
+});
 
 
 
