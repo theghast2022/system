@@ -1371,18 +1371,18 @@ client.on("message", function(message) {
     var RpsEmbed = new Discord.RichEmbed()
     .setAuthor(message.author.username)
     .setThumbnail(message.author.avatarURL)
-    .addField("Rock",👊",true)
-    .addField("Paper",📰",true)
+    .addField("Rock","👊",true)
+    .addField("Paper","📰",true)
     .addField("Scissors","✂",true)
     message.channel.send(RpsEmbed).then(msg => {
-        msg.react('👊')
-        msg.react("ً📰")
+        msg.react(' 👊')
+        msg.react("📰")
         msg.react("✂")
-.then(() => msg.react('ً👊'))
-.then(() =>msg.react('ً📰'))
+.then(() => msg.react('👊'))
+.then(() =>msg.react('📰'))
 .then(() => msg.react('✂'))
-let reaction1Filter = (reaction, user) => reaction.emoji.name === 'ً👊' && user.id === message.author.id;
-let reaction2Filter = (reaction, user) => reaction.emoji.name === 'ً📰' && user.id === message.author.id;
+let reaction1Filter = (reaction, user) => reaction.emoji.name === '👊' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === '📰' && user.id === message.author.id;
 let reaction3Filter = (reaction, user) => reaction.emoji.name === '✂' && user.id === message.author.id;
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 	    
@@ -1401,7 +1401,6 @@ reaction3.on("collect", r => {
     })
 }
 });
-
 
 
 client.login(process.env.BOT_TOKEN);
