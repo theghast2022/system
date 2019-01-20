@@ -130,8 +130,6 @@ client.on("message", message => {
         $say ➼ البوت يكرر كلامك
         $say-embed ➼ البوت يكرر كلامك مع امبيد
  `)
-.setThumbnail(message.author.avatarURL)
-.setFooter(message.author.username, message.author.avatarURL)
    message.author.sendEmbed(embed)
 
    }
@@ -160,8 +158,6 @@ client.on("message", message => {
         $obc ➼ رسالة جماعية فقط للاونلاين
         $ebc ➼ رسالة جماعية ب امبيد
  `)
-.setThumbnail(message.author.avatarURL)
-.setFooter(message.author.username, message.author.avatarURL)
    message.author.sendEmbed(embed)
 
    }
@@ -183,8 +179,6 @@ client.on("message", message => {
         $np ➼ لمعرفة الأغنية المشغلة حآليا
         $queue ➼ لمعرفة قآئمة التشغيل
  `)
-.setThumbnail(message.author.avatarURL)
-.setFooter(message.author.username, message.author.avatarURL)
    message.author.sendEmbed(embed)
 
    }
@@ -223,8 +217,6 @@ Develope By ➼ <@388357326614167563>
 For invite bot ➼
 https://discordapp.com/api/oauth2/authorize?client_id=513291971234758667&permissions=8&scope=bot
  `)
-.setThumbnail(message.author.avatarURL)
-.setFooter(message.author.username, message.author.avatarURL)
    message.author.sendEmbed(embed)
 
    }
