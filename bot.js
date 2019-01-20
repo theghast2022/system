@@ -159,14 +159,6 @@ client.on("message", message => {
         $bc ➼ رسالة جماعية
         $obc ➼ رسالة جماعية فقط للاونلاين
         $ebc ➼ رسالة جماعية ب امبيد
-        $role @someone @role ➼ لاعطاء شخص رتبة
-        $role all @role ➼ لاعطاء الكل رتبة
-        $role bots @role ➼ لاعطاء البوتات رتبة
-        $role humans @role ➼ لاعطاء الاعضاء رتبة
-        $roleremove @someone @role ➼ لسحب رتبة من شخص
-        $roleremove all @role ➼ لسحب رتبة من الكل
-        $roleremove bots @role ➼ لسحب رتبة من البوتات
-        $roleremove humans @role ➼ لسحب رتبة من الاشخاص
  `)
 .setThumbnail(message.author.avatarURL)
 .setFooter(message.author.username, message.author.avatarURL)
