@@ -1306,7 +1306,7 @@ const pubg = [
                   .setTimestamp()
  
    message.channel.sendEmbed(client);
-   message.react("??")
+   message.react("🎮")
  }
 });
 
