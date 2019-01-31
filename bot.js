@@ -112,7 +112,7 @@ client.on("message", message => {
   const embed = new Discord.RichEmbed()
       .setColor("#111111")
       .setDescription(`
-      __All Commands__
+      🌍__All Commands__🌍
         $id ➼ عرض ملفك الشخصي
         $server ➼ احصائيات السيرفر
         $avatar ➼ عرض صورتك الشخصية
@@ -141,7 +141,7 @@ client.on("message", message => {
   const embed = new Discord.RichEmbed()
       .setColor("#111111")
       .setDescription(`
-      __Admins Commands__
+      ⛏__Admins Commands__⛏
         $ban ➼ حظر العضو من السيرفر
         $kick ➼ طرد العضو من السيرفر
         $clear ➼ مسح الشات
@@ -169,7 +169,7 @@ client.on("message", message => {
   const embed = new Discord.RichEmbed()
       .setColor("#111111")
       .setDescription(`
-      __Music Commands__
+      🎵__Music Commands__🎵
         $play ➼ لتشغيل أغنية برآبط أو بأسم
         $skip ➼ لتجآوز الأغنية الحآلية
         $stop ➼ إيقآف الأغنية مؤقتا
@@ -191,7 +191,7 @@ client.on("message", message => {
   const embed = new Discord.RichEmbed()
       .setColor("#111111")
       .setDescription(`
-      __Games Commands__
+      🎮__Games Commands__🎮
         $cut ➼ للعب لعبة كت تويت
         $ask ➼ البوت يسئلك اسئلة
  `)
