@@ -160,6 +160,7 @@ client.on("message", message => {
         $ebc ➼ رسالة جماعية ب امبيد
         $autorole toggle [on/off] ➼ لتطفي و تشغل الاوتو رول
         $autorole set [role name] ➼ لتحط رتبة للاوتو رول
+        $info ➼ تشوف ازا الاوتو رول شغال وايش الرتبة الموجودة
 `)
    message.author.sendEmbed(embed)
 
