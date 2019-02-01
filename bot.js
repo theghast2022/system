@@ -158,6 +158,8 @@ client.on("message", message => {
         $bc ➼ رسالة جماعية
         $obc ➼ رسالة جماعية فقط للاونلاين
         $ebc ➼ رسالة جماعية ب امبيد
+        $autorole toggle [on/off] ➼ لتطفي و تشغل الاوتو رول
+        $autorole set [role name] ➼ لتحط رتبة للاوتو رول
 `)
    message.author.sendEmbed(embed)
 
